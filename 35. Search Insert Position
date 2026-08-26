@@ -1,0 +1,23 @@
+#35. Search Insert Position
+
+#WROTE THIS AT FIRST 
+#35. Search Insert Position
+nums = list(map(int, input().split()))
+target = int(input())
+nums.append(target)
+nums.sort()
+for i in range(len(nums)):
+    if nums[i] == target:
+        print(i)
+        break
+
+THEN I CONVERTED IT TO LEET 
+
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        nums.append(target)
+        nums.sort()
+        for i in range(len(nums)):
+            if nums[i] == target:
+                return i
+                break
