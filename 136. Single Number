@@ -1,0 +1,36 @@
+#THIS IS MY FIRST SOL
+
+import ast
+
+user_input = input()
+nums = ast.literal_eval(user_input)
+print(nums)
+nums.sort()
+print(nums)
+unique = []
+if len(nums) == 1:
+    print(*nums)
+else:
+    for i in range(0, len(nums)-1 , 2):
+        if nums[i] != nums[i+1]:
+            unique.append(nums[i])
+            print(*unique)
+            break
+if unique == []:
+    print(nums[-1])
+
+ADJUSTED TO FIT LEET
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        nums.sort()
+        unique = []
+        if len(nums) == 1:
+            return nums[0] 
+        else:
+            for i in range(0, len(nums)-1 , 2):
+                if nums[i] != nums[i+1]:
+                    unique.append(nums[i])
+                    return unique[0] 
+                    break
+            return nums[-1]
