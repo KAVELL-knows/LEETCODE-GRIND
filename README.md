@@ -22,3 +22,14 @@ Return
 Give this value back to the code that called my function.
 
 When we define a function, we use the return statement to end a function right away and send a value back to where you called it.
+
+
+03/09/2026
+CODE FOR FIBONACCI NUMBERS 
+
+p = int(input())
+count = 0 
+n = 1
+for i in range(p):
+    count, n = n, n + count 
+print(n)
