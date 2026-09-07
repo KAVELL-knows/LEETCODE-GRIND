@@ -33,3 +33,23 @@ n = 1
 for i in range(p):
     count, n = n, n + count 
 print(n)
+
+
+04/09/2026
+1. You can write 
+
+n = n // 5 as n //= 5
+
+
+2. The idea you would toward prime factorization of a number:
+n = int(input())
+("NOT UGLY")
+ while n % 2 == 0:
+   n  = n // 2
+while n % 3 == 0:
+   n  = n // 3
+while n % 5 == 0:
+        n  = n // 5
+print(n)
+you get the prime number left or 1. 
+
