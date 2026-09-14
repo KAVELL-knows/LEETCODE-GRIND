@@ -1,0 +1,10 @@
+class Solution:
+    def fib(self, n: int) -> int:
+        count = 0
+        if n == 0:
+            return 0
+        else:
+            y = 1
+            for i in range(n-1):
+                count, y = y, y + count
+            return y
