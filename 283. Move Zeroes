@@ -1,0 +1,13 @@
+#283. Move Zeroes
+nums = list(map( int, input().split()))
+new_list =  []
+k = len(nums)
+for i in range(k):
+    if nums[i] != 0:
+        new_list.append(nums[i])
+y = len(new_list)
+p = k - y 
+for i in range(p):
+    new_list.append(0)
+nums[:] = new_list
+print(nums)
