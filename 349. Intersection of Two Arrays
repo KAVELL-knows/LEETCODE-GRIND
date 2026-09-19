@@ -1,0 +1,9 @@
+class Solution:
+    def intersection(self, nums1: list[int], nums2: list[int]) -> list[int]:
+        new_list = []
+        x = set(nums1)
+        y = set(nums2)
+        for i in x:
+            if i in y:
+                new_list.append(i)
+        return new_list
