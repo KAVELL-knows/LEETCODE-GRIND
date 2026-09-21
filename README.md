@@ -51,5 +51,8 @@ while n % 3 == 0:
 while n % 5 == 0:
         n  = n // 5
 print(n)
-you get the prime number left or 1. 
+you get the prime number left, or 1. 
 
+
+21/09/2026
+.remove() removes an integer from a list
