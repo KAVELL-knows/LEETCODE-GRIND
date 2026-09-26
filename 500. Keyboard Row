@@ -1,0 +1,22 @@
+#500. Keyboard Row
+words = list(input().lower().split())
+wordy = []
+for i in words:
+    row1 = [] 
+    row2 = [] 
+    row3 = []
+    for j in i:
+        char = j.lower() 
+        if char in "qwertyuiop":
+            row1.append(j)
+        elif char in "asdfghjkl":
+            row2.append(j)
+        elif char in "zxcvbnm":
+            row3.append(j)
+    if len(row1) == len(i):
+        wordy.append(i) 
+    elif len(row2) == len(i):
+        wordy.append(i)
+    elif len(row3) == len(i):
+        wordy.append(i)
+print(wordy)  
