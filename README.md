@@ -56,3 +56,13 @@ you get the prime number left, or 1.
 
 21/09/2026
 .remove() removes an integer from a list
+
+
+26/09/2026
+Instead of typing
+if j == "q" or j == "w" or j == "e" or j == "r" or j == "t" or j == "y" or j == "u" or j == "i" or j == "o" or j == "p":
+
+we can say 
+
+if j in "qwertyuiop":
+# Python automatically checks every letter for you!
