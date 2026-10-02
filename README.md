@@ -66,3 +66,12 @@ we can say
 
 if j in "qwertyuiop":
 # Python automatically checks every letter for you!
+
+
+02/10/2026
+Here is an idea for getting the max product of 3 integers in a list from negative infinity to positive infinity 
+
+So either we take the 3 largest integers and multiply them
+or we take the 2 smallest negtaive integers and multiply that by the largest positive 
+
+we then compare and choose the maximum 
