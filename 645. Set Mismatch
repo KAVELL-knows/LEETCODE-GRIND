@@ -1,0 +1,15 @@
+#645. Set Mismatch
+class Solution:
+    def findErrorNums(self, nums: list[int]) -> list[int]:
+        unique = []
+        duplicate = -1
+        
+        for i in range(len(nums)):
+            if nums[i] in unique:
+                duplicate = nums[i]
+            else:
+                unique.append(nums[i])
+        
+        for count in range(1, len(nums) + 1):
+            if count not in unique:
+                return [duplicate, count]
