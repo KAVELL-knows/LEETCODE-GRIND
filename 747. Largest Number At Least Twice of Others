@@ -1,0 +1,17 @@
+class Solution:
+    def dominantIndex(self, nums: list[int]) -> int:
+        largest =  nums[0]
+        for i in range(len(nums)):
+            if nums[i] > largest:
+                largest = nums[i]
+
+        compare = largest//2
+        for i in range(len(nums)):
+            if nums[i] * 2 > largest and nums[i] != largest:
+                return -1
+                break
+            elif i == len(nums) - 1:
+                for i in range(len(nums)):
+                    if nums[i] == largest:
+                        return i
+                        break
