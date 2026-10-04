@@ -72,6 +72,29 @@ if j in "qwertyuiop":
 Here is an idea for getting the max product of 3 integers in a list from negative infinity to positive infinity 
 
 So either we take the 3 largest integers and multiply them
-or we take the 2 smallest negtaive integers and multiply that by the largest positive 
+or we take the 2 smallest negative integers and multiply that by the largest positive 
 
-we then compare and choose the maximum 
+We then compare and choose the maximum 
+
+
+04/10/2026
+
+Here is a nice idea in a for loops
+
+Let's say we were doing an if statement, and we wanted the if statement to only occur if the end of the for loop was met
+
+then we could for i in range(len(x)):
+   if i == len(x) -1
+
+Here is an example where I used this idea: 
+
+for i in range(len(nums)):
+    if nums[i] * 2 > largest and nums[i] != largest:
+        print("-1")
+        break
+    elif i == len(nums) - 1:
+        for i in range(len(nums)):
+            if nums[i] == largest:
+                print(i)
+                break
+
