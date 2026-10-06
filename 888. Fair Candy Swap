@@ -1,0 +1,17 @@
+class Solution:
+    def fairCandySwap(self, aliceSizes: list[int], bobSizes: list[int]) -> list[int]:
+        equal = 0.5 * (sum(aliceSizes) + sum(bobSizes))
+        needed = abs(sum(aliceSizes) - equal)
+
+        bob_set = set(bobSizes)
+
+        if sum(aliceSizes) > sum(bobSizes):
+            for i in range(len(aliceSizes)):
+                target_bob_box = aliceSizes[i] - needed
+                if target_bob_box in bob_set:
+                    return [aliceSizes[i], int(target_bob_box)]
+        else:
+            for i in range(len(aliceSizes)):
+                target_bob_box = aliceSizes[i] + needed
+                if target_bob_box in bob_set:
+                    return [aliceSizes[i], int(target_bob_box)]
