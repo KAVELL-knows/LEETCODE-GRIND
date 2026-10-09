@@ -98,3 +98,14 @@ for i in range(len(nums)):
                 print(i)
                 break
 
+09/10/2026
+
+.index() method searches for a specified element within a sequence (like a list, string, or tuple) and returns its first zero-based position
+
+fruits = ['apple', 'banana', 'cherry', 'banana']
+
+print(fruits.index('banana')) 
+Output: 1
+
+print(fruits.index('orange')) 
+Output: ValueError: 'orange' is not in list
