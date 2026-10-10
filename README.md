@@ -65,7 +65,7 @@ if j == "q" or j == "w" or j == "e" or j == "r" or j == "t" or j == "y" or j == 
 we can say 
 
 if j in "qwertyuiop":
-# Python automatically checks every letter for you!
+ Python automatically checks every letter for you!
 
 
 02/10/2026
@@ -109,3 +109,21 @@ Output: 1
 
 print(fruits.index('orange')) 
 Output: ValueError: 'orange' is not in list
+
+10/10/2026
+
+#9. Palindrome Number
+
+Let's say you had a list of numbers, so 
+
+foward = list(nums)
+and you wanted to reverse this list and create a reversed list called backward.
+It may be in your best interest to first copy the forward list, so make sure the original forward list is not lost 
+
+ x = int(input())
+
+forward = list(str(x))
+
+backward = forward.copy()
+backward.reverse()
+
