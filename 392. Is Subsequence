@@ -1,0 +1,25 @@
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        unique1 = set(s)
+        possible = True
+
+        for i in unique1:
+            counts = s.count(i) 
+            countt = t.count(i)
+
+            if counts > countt:
+                possible = False
+                break
+
+        if possible:
+            tracker = 0
+            for j in t:
+                if tracker < len(s) and j == s[tracker]:
+                    tracker += 1
+                    
+            if tracker == len(s):
+                return True
+            else:
+                return False
+        else:
+            return False
