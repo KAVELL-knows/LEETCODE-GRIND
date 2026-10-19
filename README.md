@@ -140,3 +140,30 @@ class Solution:
             left += 1
             right -= 1
 
+19/10/2026
+
+NOTES on binary search 
+
+It works on the principle that we keep checking the midpoints
+
+so 
+What we do is we first enter the starting value, that is, the left, and the ending value, which would just be n / right
+
+if the right == the left, then we have found the value we wanted, so return left
+
+We need to get the midpoint each time by using the formula mid = left + (right - left) // 2
+
+After each trial, we can check if the midpoint is the number we are looking for
+
+If the number is larger than the number we are looking for, then what we can do is 
+
+redo the recursion, but this time make the left left and the right = mid 
+
+
+If, on the other hand, the number is smaller than the number we are looking for, what we can do is
+
+make the left = mid +1 and the right == right
+
+and we run the same test again 
+   
+   
