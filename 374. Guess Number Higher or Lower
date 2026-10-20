@@ -1,0 +1,20 @@
+class Solution:
+    def guessNumber(self, n: int) -> int:
+        def first_guess_binary_search(lower, higher):
+            if lower == higher:
+                return lower
+
+            mid = lower + ((higher - lower) // 2)
+
+            result = guess(mid)  
+            
+            if result == 0:
+                return mid       
+                
+            elif result == -1:   
+                return first_guess_binary_search(lower, mid - 1)
+    
+            else:                
+                return first_guess_binary_search(mid + 1, higher)
+
+        return first_guess_binary_search(1, n)
