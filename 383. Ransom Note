@@ -1,0 +1,17 @@
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        unique = set(ransomNote)
+        count = 0 
+
+        for i in unique:
+            x = ransomNote.count(i)
+            y = magazine.count(i)
+            
+            if x > y:
+                count += 1
+                break
+
+        if count > 0:
+            return False
+        else:
+            return True
