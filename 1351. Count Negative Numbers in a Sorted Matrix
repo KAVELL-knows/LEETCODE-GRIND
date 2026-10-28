@@ -1,0 +1,24 @@
+class Solution:
+    def countNegatives(self, grid: list[list[int]]) -> int:
+        count = 0
+        cols = len(grid[0])
+
+        for row in grid:
+            low = 0
+            high = cols - 1
+            first_negative_index = cols  
+
+            while low <= high:
+                mid = low + (high - low) // 2
+                
+                if row[mid] < 0:
+                    first_negative_index = mid  
+                    high = mid - 1              
+                else:
+                    low = mid + 1     
+                    
+            count += (cols - first_negative_index)
+
+        return count
+
+        
