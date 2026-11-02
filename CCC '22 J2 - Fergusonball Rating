@@ -1,0 +1,14 @@
+#CCC '22 J2 - Fergusonball Ratings
+
+n = int(input())
+count = 0
+for i in range(n): 
+    points = int(input())
+    fouls = int(input())
+    rating = (points * 5 ) - (fouls * 3)
+    if rating > 40:
+        count += 1 
+if count == n:
+    print(f"{count}+")
+else:
+    print(count)
