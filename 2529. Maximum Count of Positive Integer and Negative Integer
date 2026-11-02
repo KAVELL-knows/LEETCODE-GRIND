@@ -1,0 +1,7 @@
+import bisect
+nums = list(map(int, input().split()))
+
+neg_count = bisect.bisect_left(nums, 0)
+pos_count = len(nums) - bisect.bisect_right(nums, 0)
+
+print(max(neg_count, pos_count))
