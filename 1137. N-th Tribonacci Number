@@ -1,0 +1,15 @@
+class Solution:
+    def tribonacci(self, n: int) -> int:
+        if n == 0:
+            return 0
+        elif n == 1:
+            return 1
+        elif n == 2:
+            return 1
+        else:
+            nums = [0, 1, 1]
+            while len(nums) != n + 1:
+                next_number = nums[-1] + nums[-2] + nums[-3]
+                nums.append(next_number)
+
+            return nums[-1]
