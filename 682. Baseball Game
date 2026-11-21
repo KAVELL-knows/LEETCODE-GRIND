@@ -1,0 +1,22 @@
+class Solution:
+    def calPoints(self, operations: list[str]) -> int:
+        answer = 0
+        nums = []
+
+        for i in operations:
+            if i == '+':
+                digit = nums[-1] + nums[-2]
+                nums.append(digit)
+                answer += digit
+            elif i == 'C':
+                answer -= nums.pop()
+            elif i == 'D':
+                added = nums[-1] * 2
+                nums.append(added)
+                answer += added
+            else:
+                number = int(i)
+                nums.append(number)
+                answer += number
+
+        return answer
