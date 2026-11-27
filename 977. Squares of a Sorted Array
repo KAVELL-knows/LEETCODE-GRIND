@@ -1,0 +1,8 @@
+#977. Squares of a Sorted Array
+nums = list(map(int, input().split()))
+answer = []
+for num in nums:
+    y = num**2
+    answer.append(y)
+answer.sort()
+print(answer)
